@@ -1,4 +1,5 @@
 Default	True	2.0	3
+CHASSIS_GND	True	2.0	3
 HV_MAINS	True	2.0	3
 HV_SENSE	True	2.0	3
 LOGIC_PWR	True	2.0	3

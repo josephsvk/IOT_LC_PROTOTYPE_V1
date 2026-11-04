@@ -14,3 +14,8 @@
   (constraint creepage (min 3.2mm))
   (condition "A.NetClass == 'HV_MAINS' && B.NetClass == 'HV_MAINS' && A.Net != B.Net")
 )
+
+(rule "PWR_24V_MIN_WIDTH"
+  (constraint track_width (min 1mm))
+  (condition "A.NetClass == 'PWR_24V'")
+)
