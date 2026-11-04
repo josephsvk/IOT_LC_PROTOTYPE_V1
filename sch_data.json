@@ -1,0 +1,382 @@
+[
+    {
+        "sheet_name": "Main Sheet",
+        "sheet_path": "/home/joseph/Dokumenty/kicad/IOT_V2/IOT_LC_PROTOTYPE_V1/IOT_LC_PROTOTYPE_V1.kicad_sch",
+        "paper": {
+            "paper_height": 420,
+            "paper_width": 594
+        },
+        "symbols": [
+            {
+                "reference": "U104",
+                "x_position": 364.49,
+                "y_position": 271.78,
+                "rotation": 0
+            },
+            {
+                "reference": "U101",
+                "x_position": 364.49,
+                "y_position": 191.77,
+                "rotation": 0
+            },
+            {
+                "reference": "R112",
+                "x_position": 337.82,
+                "y_position": 173.99,
+                "rotation": 0
+            },
+            {
+                "reference": "U103",
+                "x_position": 110.998,
+                "y_position": 208.026,
+                "rotation": 0
+            },
+            {
+                "reference": "R109",
+                "x_position": 73.406,
+                "y_position": 354.076,
+                "rotation": 0
+            },
+            {
+                "reference": "R103",
+                "x_position": 73.406,
+                "y_position": 260.096,
+                "rotation": 0
+            },
+            {
+                "reference": "R113",
+                "x_position": 337.82,
+                "y_position": 226.06,
+                "rotation": 0
+            },
+            {
+                "reference": "R102",
+                "x_position": 73.406,
+                "y_position": 249.936,
+                "rotation": 0
+            },
+            {
+                "reference": "R104",
+                "x_position": 73.406,
+                "y_position": 280.416,
+                "rotation": 0
+            },
+            {
+                "reference": "R117",
+                "x_position": 337.82,
+                "y_position": 306.07,
+                "rotation": 0
+            },
+            {
+                "reference": "R115",
+                "x_position": 337.82,
+                "y_position": 266.7,
+                "rotation": 0
+            },
+            {
+                "reference": "R101",
+                "x_position": 74.168,
+                "y_position": 209.296,
+                "rotation": 0
+            },
+            {
+                "reference": "C105",
+                "x_position": 73.406,
+                "y_position": 364.236,
+                "rotation": 0
+            },
+            {
+                "reference": "CN102",
+                "x_position": 402.59,
+                "y_position": 247.65,
+                "rotation": 0
+            },
+            {
+                "reference": "R111",
+                "x_position": 337.82,
+                "y_position": 213.36,
+                "rotation": 0
+            },
+            {
+                "reference": "R108",
+                "x_position": 73.406,
+                "y_position": 343.916,
+                "rotation": 0
+            },
+            {
+                "reference": "C101",
+                "x_position": 81.026,
+                "y_position": 221.996,
+                "rotation": 90
+            },
+            {
+                "reference": "R116",
+                "x_position": 337.82,
+                "y_position": 293.37,
+                "rotation": 0
+            },
+            {
+                "reference": "R107",
+                "x_position": 73.406,
+                "y_position": 322.326,
+                "rotation": 0
+            },
+            {
+                "reference": "C102",
+                "x_position": 73.406,
+                "y_position": 270.256,
+                "rotation": 0
+            },
+            {
+                "reference": "C104",
+                "x_position": 73.406,
+                "y_position": 332.486,
+                "rotation": 0
+            },
+            {
+                "reference": "R110",
+                "x_position": 337.82,
+                "y_position": 186.69,
+                "rotation": 0
+            },
+            {
+                "reference": "C103",
+                "x_position": 73.406,
+                "y_position": 300.736,
+                "rotation": 0
+            },
+            {
+                "reference": "R114",
+                "x_position": 337.82,
+                "y_position": 254,
+                "rotation": 0
+            },
+            {
+                "reference": "H101",
+                "x_position": 132.08,
+                "y_position": 98.1008,
+                "rotation": 0
+            },
+            {
+                "reference": "U102",
+                "x_position": 364.49,
+                "y_position": 231.14,
+                "rotation": 0
+            },
+            {
+                "reference": "U105",
+                "x_position": 364.49,
+                "y_position": 311.15,
+                "rotation": 0
+            },
+            {
+                "reference": "CN101",
+                "x_position": 120.396,
+                "y_position": 302.006,
+                "rotation": 0
+            },
+            {
+                "reference": "R105",
+                "x_position": 73.406,
+                "y_position": 290.576,
+                "rotation": 0
+            },
+            {
+                "reference": "R106",
+                "x_position": 73.406,
+                "y_position": 312.166,
+                "rotation": 0
+            }
+        ],
+        "sheet_files": [
+            {
+                "sheet_name": "MCU",
+                "sheet_file": "../IOT_Blocks.kicad_blocks/XIAO-Add-On-Plus.kicad_block/XIAO-Add-On-Plus.kicad_sch",
+                "sheet_path": "/home/joseph/Dokumenty/kicad/IOT_V2/IOT_LC_PROTOTYPE_V1/../IOT_Blocks.kicad_blocks/XIAO-Add-On-Plus.kicad_block/XIAO-Add-On-Plus.kicad_sch",
+                "x_position": 246.38,
+                "y_position": 84.4046,
+                "rotation": 0
+            },
+            {
+                "sheet_name": "36V_TO_5V+3V3",
+                "sheet_file": "../IOT_Blocks.kicad_blocks/36v to 5v + 3v3.kicad_block/36v to 5v + 3v3.kicad_sch",
+                "sheet_path": "/home/joseph/Dokumenty/kicad/IOT_V2/IOT_LC_PROTOTYPE_V1/../IOT_Blocks.kicad_blocks/36v to 5v + 3v3.kicad_block/36v to 5v + 3v3.kicad_sch",
+                "x_position": 0,
+                "y_position": 0,
+                "rotation": 0
+            }
+        ]
+    },
+    {
+        "sheet_name": "MCU",
+        "sheet_path": "/home/joseph/Dokumenty/kicad/IOT_V2/IOT_LC_PROTOTYPE_V1/../IOT_Blocks.kicad_blocks/XIAO-Add-On-Plus.kicad_block/XIAO-Add-On-Plus.kicad_sch",
+        "paper": {
+            "paper_height": 210,
+            "paper_width": 297
+        },
+        "symbols": [
+            {
+                "reference": "R201",
+                "x_position": 162.56,
+                "y_position": 121.92,
+                "rotation": 0
+            },
+            {
+                "reference": "U203",
+                "x_position": 254,
+                "y_position": 116.84,
+                "rotation": 0
+            },
+            {
+                "reference": "U201",
+                "x_position": 196.85,
+                "y_position": 85.09,
+                "rotation": 0
+            },
+            {
+                "reference": "U202",
+                "x_position": 254,
+                "y_position": 91.44,
+                "rotation": 0
+            }
+        ],
+        "sheet_files": []
+    },
+    {
+        "sheet_name": "36V_TO_5V+3V3",
+        "sheet_path": "/home/joseph/Dokumenty/kicad/IOT_V2/IOT_LC_PROTOTYPE_V1/../IOT_Blocks.kicad_blocks/36v to 5v + 3v3.kicad_block/36v to 5v + 3v3.kicad_sch",
+        "paper": {
+            "paper_height": 210,
+            "paper_width": 297
+        },
+        "symbols": [
+            {
+                "reference": "U301",
+                "x_position": 90.17,
+                "y_position": 62.23,
+                "rotation": 0
+            },
+            {
+                "reference": "CN301",
+                "x_position": 38.1,
+                "y_position": 62.23,
+                "rotation": 0
+            },
+            {
+                "reference": "C313",
+                "x_position": 105.41,
+                "y_position": 64.77,
+                "rotation": 90
+            },
+            {
+                "reference": "C311",
+                "x_position": 212.09,
+                "y_position": 118.11,
+                "rotation": 0
+            },
+            {
+                "reference": "C309",
+                "x_position": 233.68,
+                "y_position": 96.52,
+                "rotation": 0
+            },
+            {
+                "reference": "C307",
+                "x_position": 233.68,
+                "y_position": 74.93,
+                "rotation": 0
+            },
+            {
+                "reference": "C302",
+                "x_position": 184.15,
+                "y_position": 46.99,
+                "rotation": 0
+            },
+            {
+                "reference": "C303",
+                "x_position": 162.56,
+                "y_position": 36.83,
+                "rotation": 0
+            },
+            {
+                "reference": "C301",
+                "x_position": 185.42,
+                "y_position": 36.83,
+                "rotation": 0
+            },
+            {
+                "reference": "C305",
+                "x_position": 233.68,
+                "y_position": 53.34,
+                "rotation": 0
+            },
+            {
+                "reference": "C304",
+                "x_position": 162.56,
+                "y_position": 46.99,
+                "rotation": 0
+            },
+            {
+                "reference": "R303",
+                "x_position": 60.96,
+                "y_position": 64.77,
+                "rotation": 90
+            },
+            {
+                "reference": "D301",
+                "x_position": 105.41,
+                "y_position": 53.34,
+                "rotation": 90
+            },
+            {
+                "reference": "C308",
+                "x_position": 233.68,
+                "y_position": 86.36,
+                "rotation": 0
+            },
+            {
+                "reference": "C314",
+                "x_position": 143.51,
+                "y_position": 59.69,
+                "rotation": 270
+            },
+            {
+                "reference": "FH301",
+                "x_position": 55.88,
+                "y_position": 50.8,
+                "rotation": 0
+            },
+            {
+                "reference": "C306",
+                "x_position": 233.68,
+                "y_position": 63.5,
+                "rotation": 0
+            },
+            {
+                "reference": "PS301",
+                "x_position": 175.26,
+                "y_position": 95.25,
+                "rotation": 0
+            },
+            {
+                "reference": "R301",
+                "x_position": 135.89,
+                "y_position": 90.17,
+                "rotation": 0
+            },
+            {
+                "reference": "C310",
+                "x_position": 233.68,
+                "y_position": 106.68,
+                "rotation": 0
+            },
+            {
+                "reference": "R302",
+                "x_position": 142.24,
+                "y_position": 114.3,
+                "rotation": 0
+            }
+        ],
+        "sheet_files": []
+    }
+]

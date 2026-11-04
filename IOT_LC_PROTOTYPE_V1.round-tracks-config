@@ -1,0 +1,10 @@
+Default	True	2.0	3
+HV_MAINS	True	2.0	3
+HV_SENSE	True	2.0	3
+LOGIC_PWR	True	2.0	3
+PWR_24V	True	2.0	3
+PWR_3V3	True	2.0	3
+PWR_5V	True	2.0	3
+PWR_SW	True	2.0	3
+SIGNAL	True	2.0	3
+False	True	False
