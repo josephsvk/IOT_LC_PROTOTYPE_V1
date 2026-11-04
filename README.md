@@ -8,28 +8,6 @@ This repository contains the KiCad schematic, PCB layout, design rules, and gene
 
 > **Safety:** The design includes mains-voltage circuitry. It has not been certified or validated for safe mains operation. Do not assume that the published design is safe to manufacture or energize.
 
-## Schematic
-
-![KiCad schematic preview](docs/images/schematic.png)
-
-[View complete schematic (PDF)](docs/pdf/schematic.pdf)
-
-## PCB — Front
-
-![PCB front copper and silkscreen](docs/images/pcb-front.png)
-
-[View front PCB (PDF)](docs/pdf/pcb-front.pdf)
-
-## PCB — Back
-
-![PCB back copper and silkscreen](docs/images/pcb-back.png)
-
-[View back PCB (PDF)](docs/pdf/pcb-back.pdf)
-
-## PCB — Individual Layers
-
-[View all PCB layers (PDF)](docs/pdf/pcb-layers.pdf)
-
 ## Project Files
 
 - `IOT_LC_PROTOTYPE_V1.kicad_pro` — KiCad project configuration
@@ -90,54 +68,6 @@ No license has been specified. All rights reserved unless a license is added.
 ![Complete Hierarchical Schematic page 3](docs/images/schematic-003.png)
 
 [View vector PDF](docs/pdf/schematic.pdf)
-
-### 5V_TO_3V3
-
-**Page 1**
-
-![5V_TO_3V3 page 1](docs/images/sheet-001-001.png)
-
-[View vector PDF](docs/pdf/sheets/5V_TO_3V3.pdf)
-
-### IOT_LC_PROTOTYPE_V1
-
-**Page 1**
-
-![IOT_LC_PROTOTYPE_V1 page 1](docs/images/sheet-002-001.png)
-
-**Page 2**
-
-![IOT_LC_PROTOTYPE_V1 page 2](docs/images/sheet-002-002.png)
-
-**Page 3**
-
-![IOT_LC_PROTOTYPE_V1 page 3](docs/images/sheet-002-003.png)
-
-[View vector PDF](docs/pdf/sheets/IOT_LC_PROTOTYPE_V1.pdf)
-
-### LC_24V_PWR
-
-**Page 1**
-
-![LC_24V_PWR page 1](docs/images/sheet-003-001.png)
-
-[View vector PDF](docs/pdf/sheets/LC_24V_PWR.pdf)
-
-### LC_OUT
-
-**Page 1**
-
-![LC_OUT page 1](docs/images/sheet-004-001.png)
-
-[View vector PDF](docs/pdf/sheets/LC_OUT.pdf)
-
-### LMR51430
-
-**Page 1**
-
-![LMR51430 page 1](docs/images/sheet-005-001.png)
-
-[View vector PDF](docs/pdf/sheets/LMR51430.pdf)
 
 ## PCB Documentation
 

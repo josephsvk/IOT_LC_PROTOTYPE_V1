@@ -44,32 +44,6 @@ kicad-cli sch export pdf \
     -o "$PDF_DIR/schematic.pdf" \
     "$ROOT/$PROJECT.kicad_sch"
 
-# Each schematic source file independently
-echo "[2/4] Individual schematic files"
-
-find "$ROOT" \
-    \( -name .git -o -name .history \
-       -o -name docs -o -name production \
-       -o -name '*-backups' \
-       -o -name '_restore_backup_*' \) -prune -o \
-    -name '*.kicad_sch' -type f -print0 |
-while IFS= read -r -d '' file; do
-    relative="${file#"$ROOT"/}"
-    output="$SCH_DIR/${relative%.kicad_sch}.pdf"
-
-    mkdir -p "$(dirname "$output")"
-
-    echo "Exporting $relative"
-
-    if ! kicad-cli sch export pdf \
-        --no-background-color \
-        -o "$output" \
-        "$file"; then
-        echo "WARNING: Could not export $relative" >&2
-        rm -f "$output"
-    fi
-done
-
 # PCB export
 echo "[3/4] PCB documentation"
 

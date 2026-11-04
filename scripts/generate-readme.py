@@ -132,20 +132,6 @@ def main():
         "schematic",
     )
 
-    # Discover every individually exported sheet
-    for index, file in enumerate(
-        sorted((PDF / "sheets").rglob("*.pdf")), 1
-    ):
-        name = file.relative_to(PDF / "sheets")
-        title = name.with_suffix("").as_posix()
-
-        add_pdf(
-            lines,
-            file,
-            title,
-            f"sheet-{index:03d}",
-        )
-
     lines += [
         "## PCB Documentation",
         "",
