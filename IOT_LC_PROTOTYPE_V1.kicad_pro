@@ -16,7 +16,7 @@
         "copper_text_thickness": 0.3,
         "copper_text_upright": false,
         "courtyard_line_width": 0.05,
-        "dimension_precision": 4,
+        "dimension_precision": 5,
         "dimension_units": 3,
         "dimensions": {
           "arrow_length": 1270000,
@@ -1054,7 +1054,9 @@
       "ESP32-S3-WROOM-1U-N16R8"
     ]
   ],
-  "text_variables": {},
+  "text_variables": {
+    "Label": ""
+  },
   "tuning_profiles": {
     "meta": {
       "version": 0
