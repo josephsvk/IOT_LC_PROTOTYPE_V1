@@ -44811,8 +44811,8 @@
 		(uuid "d590106f-0773-484e-a018-17d9e67ee29b")
 	)
 	(gr_rect
-		(start 66.4 133.025)
-		(end 68.4 139.975)
+		(start 66.4 132.1)
+		(end 68.4 140.1)
 		(radius 1)
 		(stroke
 			(width 0.05)
@@ -44823,7 +44823,7 @@
 		(uuid "7cd48001-5708-4498-91e1-28fa13057a5e")
 	)
 	(gr_rect
-		(start 71.15 133.1)
+		(start 71.15 132.1)
 		(end 73.15 140.1)
 		(radius 1)
 		(stroke
@@ -44835,7 +44835,31 @@
 		(uuid "0a865059-ea8a-4768-a01a-080892243a8c")
 	)
 	(gr_rect
-		(start 84.4 110.55)
+		(start 76.65 123.8)
+		(end 85.75 125.8)
+		(radius 1)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "452740c3-1aa4-48b4-8a5b-37b916249203")
+	)
+	(gr_rect
+		(start 80.1 120.35)
+		(end 82.1 129.45)
+		(radius 1)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "293ac1c7-c382-4bca-8a96-4236baa66db5")
+	)
+	(gr_rect
+		(start 82.4 110.55)
 		(end 101.7 112.55)
 		(radius 1)
 		(stroke
@@ -44847,8 +44871,8 @@
 		(uuid "f6bda09e-3744-47c2-83d4-5dba6a8a5d93")
 	)
 	(gr_rect
-		(start 99.65 132.9)
-		(end 101.65 140.35)
+		(start 99.65 131.6)
+		(end 101.65 140.7)
 		(radius 1)
 		(stroke
 			(width 0.05)
@@ -44860,7 +44884,7 @@
 	)
 	(gr_rect
 		(start 99.7 110.5)
-		(end 101.7 120)
+		(end 101.7 122.2)
 		(radius 1)
 		(stroke
 			(width 0.05)
