@@ -51,59 +51,59 @@ The README displays PNG previews. The linked PDF files provide vector-quality do
 No license has been specified. All rights reserved unless a license is added.
 
 <!-- AUTO-DOCS-START -->
-## Schematic Documentation
+## Schematic documentation
 
-### Complete Hierarchical Schematic
+### Complete active hierarchical schematic
 
 **Page 1**
 
-![Complete Hierarchical Schematic page 1](docs/images/schematic-001.png)
+![Complete active hierarchical schematic — page 1](docs/images/schematic-001.png)
 
 **Page 2**
 
-![Complete Hierarchical Schematic page 2](docs/images/schematic-002.png)
+![Complete active hierarchical schematic — page 2](docs/images/schematic-002.png)
 
 **Page 3**
 
-![Complete Hierarchical Schematic page 3](docs/images/schematic-003.png)
+![Complete active hierarchical schematic — page 3](docs/images/schematic-003.png)
 
 [View vector PDF](docs/pdf/schematic.pdf)
 
-## PCB Documentation
+## PCB documentation
 
-### PCB Front
+### PCB front
 
 **Page 1**
 
-![PCB Front page 1](docs/images/pcb-front-001.png)
+![PCB front — page 1](docs/images/pcb-front-001.png)
 
 [View vector PDF](docs/pdf/pcb-front.pdf)
 
-### PCB Back
+### PCB back
 
 **Page 1**
 
-![PCB Back page 1](docs/images/pcb-back-001.png)
+![PCB back — page 1](docs/images/pcb-back-001.png)
 
 [View vector PDF](docs/pdf/pcb-back.pdf)
 
-### Individual PCB Layers
+### Individual PCB layers
 
 **Page 1**
 
-![Individual PCB Layers page 1](docs/images/pcb-layers-001.png)
+![Individual PCB layers — page 1](docs/images/pcb-layers-001.png)
 
 **Page 2**
 
-![Individual PCB Layers page 2](docs/images/pcb-layers-002.png)
+![Individual PCB layers — page 2](docs/images/pcb-layers-002.png)
 
 **Page 3**
 
-![Individual PCB Layers page 3](docs/images/pcb-layers-003.png)
+![Individual PCB layers — page 3](docs/images/pcb-layers-003.png)
 
 **Page 4**
 
-![Individual PCB Layers page 4](docs/images/pcb-layers-004.png)
+![Individual PCB layers — page 4](docs/images/pcb-layers-004.png)
 
 [View vector PDF](docs/pdf/pcb-layers.pdf)
 <!-- AUTO-DOCS-END -->

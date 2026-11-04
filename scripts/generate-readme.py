@@ -1,190 +1,82 @@
-
 #!/usr/bin/env python3
-"""Generate cropped PDF previews and README gallery."""
-
+"""Update the generated README section and create cropped PNGs from PDF pages."""
 from pathlib import Path
 import re
 import subprocess
-
 from PIL import Image, ImageChops, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
-PDF = ROOT / "docs/pdf"
-IMAGES = ROOT / "docs/images"
-README = ROOT / "README.md"
-
-START = "<!-- AUTO-DOCS-START -->"
-END = "<!-- AUTO-DOCS-END -->"
-
-DPI = 180
-MAX_WIDTH = 2400
-PADDING = 32
-
+PDF = ROOT / 'docs/pdf'
+IMAGES = ROOT / 'docs/images'
+README = ROOT / 'README.md'
+START = '<!-- AUTO-DOCS-START -->'
+END = '<!-- AUTO-DOCS-END -->'
 IMAGES.mkdir(parents=True, exist_ok=True)
 
 
-def pdf_pages(path):
-    """Read the number of pages in a PDF."""
-    result = subprocess.check_output(
-        ["pdfinfo", str(path)], text=True
-    )
-    match = re.search(r"^Pages:\s+(\d+)", result, re.M)
-    if not match:
-        raise RuntimeError(f"Cannot read pages: {path}")
-    return int(match.group(1))
+def pages(path):
+    text = subprocess.check_output(['pdfinfo', str(path)], text=True)
+    result = re.search(r'^Pages:\s+(\d+)', text, re.M)
+    if not result or int(result.group(1)) < 1:
+        raise ValueError(f'Invalid PDF page count: {path}')
+    return int(result.group(1))
 
 
-def preview(pdf, page, name):
-    """Render one PDF page and trim its white margins."""
-    prefix = IMAGES / name
-
-    subprocess.run(
-        [
-            "pdftoppm",
-            "-f", str(page),
-            "-l", str(page),
-            "-singlefile",
-            "-r", str(DPI),
-            "-png",
-            str(pdf),
-            str(prefix),
-        ],
-        check=True,
-    )
-
-    target = prefix.with_suffix(".png")
-
-    with Image.open(target) as source:
-        image = source.convert("RGB")
-
-    # Detect non-white pixels
-    background = Image.new("RGB", image.size, "white")
-    difference = ImageChops.difference(image, background)
-
-    # Ignore near-white compression / rendering noise
-    mask = difference.convert("L").point(
-        lambda value: 255 if value > 15 else 0
-    )
-
-    bounds = mask.getbbox()
-
-    if bounds:
-        image = image.crop(bounds)
-
-    # Small consistent border around the content
-    image = ImageOps.expand(
-        image, border=PADDING, fill="white"
-    )
-
-    if image.width > MAX_WIDTH:
-        new_height = round(
-            image.height * MAX_WIDTH / image.width
-        )
-        image = image.resize(
-            (MAX_WIDTH, new_height),
-            Image.Resampling.LANCZOS,
-        )
-
-    image.save(target, optimize=True)
+def render(pdf, page, prefix):
+    target_prefix = IMAGES / f'{prefix}-{page:03d}'
+    subprocess.run(['pdftoppm', '-f', str(page), '-l', str(page), '-singlefile',
+                    '-r', '180', '-png', str(pdf), str(target_prefix)], check=True)
+    target = target_prefix.with_suffix('.png')
+    with Image.open(target) as loaded:
+        im = loaded.convert('RGB')
+    delta = ImageChops.difference(im, Image.new('RGB', im.size, 'white'))
+    mask = delta.convert('L').point(lambda v: 255 if v > 15 else 0)
+    rect = mask.getbbox()
+    if rect:
+        im = im.crop(rect)
+    im = ImageOps.expand(im, border=28, fill='white')
+    if im.width > 2400:
+        im = im.resize((2400, round(im.height * 2400 / im.width)), Image.Resampling.LANCZOS)
+    im.save(target, optimize=True)
     return target.relative_to(ROOT).as_posix()
 
 
-def add_pdf(lines, pdf, title, prefix):
-    """Add every PDF page to the README."""
-    if not pdf.exists():
-        return
-
-    relative_pdf = pdf.relative_to(ROOT).as_posix()
-    count = pdf_pages(pdf)
-
-    lines.append(f"### {title}")
-    lines.append("")
-
+def section(lines, filename, title):
+    pdf = PDF / filename
+    count = pages(pdf)
+    prefix = pdf.stem
+    lines.extend([f'### {title}', ''])
     for page in range(1, count + 1):
-        image_name = f"{prefix}-{page:03d}"
-        img = preview(pdf, page, image_name)
-
-        lines.append(f"**Page {page}**")
-        lines.append("")
-        lines.append(f"![{title} page {page}]({img})")
-        lines.append("")
-
-    lines.append(f"[View vector PDF]({relative_pdf})")
-    lines.append("")
+        img = render(pdf, page, prefix)
+        lines.extend([f'**Page {page}**', '', f'![{title} — page {page}]({img})', ''])
+    lines.extend([f'[View vector PDF]({pdf.relative_to(ROOT).as_posix()})', ''])
 
 
 def main():
-    # Remove old generated previews
-    for old in IMAGES.glob("*.png"):
-        if old.name.startswith(("schematic-", "sheet-", "pcb-")):
-            old.unlink()
-
-    lines = [
-        "## Schematic Documentation",
-        "",
-    ]
-
-    # Complete project
-    add_pdf(
-        lines,
-        PDF / "schematic.pdf",
-        "Complete Hierarchical Schematic",
-        "schematic",
-    )
-
-    lines += [
-        "## PCB Documentation",
-        "",
-    ]
-
-    add_pdf(
-        lines,
-        PDF / "pcb-front.pdf",
-        "PCB Front",
-        "pcb-front",
-    )
-    add_pdf(
-        lines,
-        PDF / "pcb-back.pdf",
-        "PCB Back",
-        "pcb-back",
-    )
-
-    add_pdf(
-        lines,
-        PDF / "pcb-layers.pdf",
-        "Individual PCB Layers",
-        "pcb-layers",
-    )
-
-    generated = "\n".join(lines).rstrip()
-
+    for stale in IMAGES.glob('*.png'):
+        if stale.name.startswith(('schematic-', 'sheet-', 'pcb-')):
+            stale.unlink()
+    lines = ['## Schematic documentation', '']
+    section(lines, 'schematic.pdf', 'Complete active hierarchical schematic')
+    lines.extend(['## PCB documentation', ''])
+    section(lines, 'pcb-front.pdf', 'PCB front')
+    section(lines, 'pcb-back.pdf', 'PCB back')
+    section(lines, 'pcb-layers.pdf', 'Individual PCB layers')
+    generated = f'{START}\n' + '\n'.join(lines).rstrip() + f'\n{END}'
     if README.exists():
-        content = README.read_text(encoding="utf-8")
+        data = README.read_text(encoding='utf-8')
     else:
-        content = (
-            "# IOT_LC_PROTOTYPE_V1\n\n"
-            "Modular IoT controller — KiCad hardware project.\n\n"
-            "Work in progress. Not validated for mains safety.\n\n"
-        )
-
-    block = f"{START}\n{generated}\n{END}"
-
-    if START in content and END in content:
-        pattern = (
-            re.escape(START)
-            + r".*?"
-            + re.escape(END)
-        )
-        content = re.sub(
-            pattern, lambda _: block, content, flags=re.S
-        )
+        data = '# KiCad hardware project\n\nWork in progress. Not validated for production or mains safety.\n'
+    if START in data and END in data and data.index(START) < data.index(END):
+        data = re.sub(re.escape(START) + r'.*?' + re.escape(END),
+                      lambda _: generated, data, flags=re.S)
+    elif START in data or END in data:
+        raise ValueError('README has inconsistent AUTO-DOCS markers')
     else:
-        content = content.rstrip() + "\n\n" + block + "\n"
+        data = data.rstrip() + '\n\n' + generated + '\n'
+    README.write_text(data, encoding='utf-8')
+    print('README gallery updated')
 
-    README.write_text(content, encoding="utf-8")
-    print(f"Updated: {README}")
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

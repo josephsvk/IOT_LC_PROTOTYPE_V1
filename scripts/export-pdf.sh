@@ -1,76 +1,30 @@
 #!/usr/bin/env bash
-# KiCad documentation generator
-#
-# Exports:
-#   - Complete hierarchical schematic PDF
-#   - Individual schematic file PDFs
-#   - Front and back PCB PDFs
-#   - Multi-page PCB layer PDF
-#   - Cropped PNG previews
-#   - Dynamic README gallery
-#
-# Usage: ./scripts/export-pdf.sh
-
+# Generate PDFs from the active KiCad hierarchy and PCB, then README PNG previews.
+# Uses the project configured in .kicad-automation.conf.
 set -Eeuo pipefail
-
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
-
-PROJECT="IOT_LC_PROTOTYPE_V1"
+source "$ROOT/.kicad-automation.conf"
+: "${PROJECT_NAME:?Missing PROJECT_NAME}"
+SCH="$ROOT/$PROJECT_NAME.kicad_sch"
+PCB="$ROOT/$PROJECT_NAME.kicad_pcb"
 PDF_DIR="$ROOT/docs/pdf"
-SCH_DIR="$PDF_DIR/sheets"
-IMG_DIR="$ROOT/docs/images"
-
 for cmd in kicad-cli pdftoppm pdfinfo python3; do
-    command -v "$cmd" >/dev/null || {
-        echo "Missing dependency: $cmd"
-        exit 1
-    }
+  command -v "$cmd" >/dev/null || { echo "Missing dependency: $cmd" >&2; exit 1; }
 done
-
-python3 -c "from PIL import Image" || {
-    echo "Install python3-pil"
-    exit 1
-}
-
-mkdir -p "$SCH_DIR" "$IMG_DIR"
-
-# Main hierarchical schematic
-echo "[1/4] Complete schematic"
-
-kicad-cli sch export pdf \
-    --no-background-color \
-    -o "$PDF_DIR/schematic.pdf" \
-    "$ROOT/$PROJECT.kicad_sch"
-
-# PCB export
-echo "[3/4] PCB documentation"
-
-PCB="$ROOT/$PROJECT.kicad_pcb"
-
-kicad-cli pcb export pdf \
-    --mode-single \
-    --layers "F.Cu,F.SilkS,Edge.Cuts" \
-    --check-zones \
-    -o "$PDF_DIR/pcb-front.pdf" "$PCB"
-
-kicad-cli pcb export pdf \
-    --mode-single \
-    --layers "B.Cu,B.SilkS,Edge.Cuts" \
-    --check-zones \
-    -o "$PDF_DIR/pcb-back.pdf" "$PCB"
-
-kicad-cli pcb export pdf \
-    --mode-multipage \
-    --layers "F.Cu,B.Cu,F.SilkS,B.SilkS" \
-    --common-layers "Edge.Cuts" \
-    --check-zones \
-    -o "$PDF_DIR/pcb-layers.pdf" "$PCB"
-
-# Generate images and README
-echo "[4/4] README gallery"
-
+python3 -c 'from PIL import Image' >/dev/null || { echo 'Install python3-pil (Pillow)' >&2; exit 1; }
+[[ -f "$SCH" && -f "$PCB" ]] || { echo "Missing schematic or PCB for $PROJECT_NAME" >&2; exit 1; }
+mkdir -p "$PDF_DIR"
+# Do not recursively export all .kicad_sch files: unused draft sheets must not appear.
+echo '[1/5] Active hierarchical schematic'
+kicad-cli sch export pdf --no-background-color -o "$PDF_DIR/schematic.pdf" "$SCH"
+echo '[2/5] PCB front'
+kicad-cli pcb export pdf --mode-single --layers 'F.Cu,F.SilkS,Edge.Cuts' --check-zones -o "$PDF_DIR/pcb-front.pdf" "$PCB"
+echo '[3/5] PCB back'
+kicad-cli pcb export pdf --mode-single --layers 'B.Cu,B.SilkS,Edge.Cuts' --check-zones -o "$PDF_DIR/pcb-back.pdf" "$PCB"
+echo '[4/5] Individual PCB layers'
+kicad-cli pcb export pdf --mode-multipage --layers 'F.Cu,B.Cu,F.SilkS,B.SilkS' --common-layers 'Edge.Cuts' --check-zones -o "$PDF_DIR/pcb-layers.pdf" "$PCB"
+echo '[5/5] Cropped PNG previews and README'
 python3 "$ROOT/scripts/generate-readme.py"
-
-echo "Documentation generated successfully."
-
+python3 "$ROOT/scripts/check-docs.py"
+echo 'Documentation export passed'
