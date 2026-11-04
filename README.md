@@ -71,3 +71,109 @@ The README displays PNG previews. The linked PDF files provide vector-quality do
 ## License
 
 No license has been specified. All rights reserved unless a license is added.
+
+<!-- AUTO-DOCS-START -->
+## Schematic Documentation
+
+### Complete Hierarchical Schematic
+
+**Page 1**
+
+![Complete Hierarchical Schematic page 1](docs/images/schematic-001.png)
+
+**Page 2**
+
+![Complete Hierarchical Schematic page 2](docs/images/schematic-002.png)
+
+**Page 3**
+
+![Complete Hierarchical Schematic page 3](docs/images/schematic-003.png)
+
+[View vector PDF](docs/pdf/schematic.pdf)
+
+### 5V_TO_3V3
+
+**Page 1**
+
+![5V_TO_3V3 page 1](docs/images/sheet-001-001.png)
+
+[View vector PDF](docs/pdf/sheets/5V_TO_3V3.pdf)
+
+### IOT_LC_PROTOTYPE_V1
+
+**Page 1**
+
+![IOT_LC_PROTOTYPE_V1 page 1](docs/images/sheet-002-001.png)
+
+**Page 2**
+
+![IOT_LC_PROTOTYPE_V1 page 2](docs/images/sheet-002-002.png)
+
+**Page 3**
+
+![IOT_LC_PROTOTYPE_V1 page 3](docs/images/sheet-002-003.png)
+
+[View vector PDF](docs/pdf/sheets/IOT_LC_PROTOTYPE_V1.pdf)
+
+### LC_24V_PWR
+
+**Page 1**
+
+![LC_24V_PWR page 1](docs/images/sheet-003-001.png)
+
+[View vector PDF](docs/pdf/sheets/LC_24V_PWR.pdf)
+
+### LC_OUT
+
+**Page 1**
+
+![LC_OUT page 1](docs/images/sheet-004-001.png)
+
+[View vector PDF](docs/pdf/sheets/LC_OUT.pdf)
+
+### LMR51430
+
+**Page 1**
+
+![LMR51430 page 1](docs/images/sheet-005-001.png)
+
+[View vector PDF](docs/pdf/sheets/LMR51430.pdf)
+
+## PCB Documentation
+
+### PCB Front
+
+**Page 1**
+
+![PCB Front page 1](docs/images/pcb-front-001.png)
+
+[View vector PDF](docs/pdf/pcb-front.pdf)
+
+### PCB Back
+
+**Page 1**
+
+![PCB Back page 1](docs/images/pcb-back-001.png)
+
+[View vector PDF](docs/pdf/pcb-back.pdf)
+
+### Individual PCB Layers
+
+**Page 1**
+
+![Individual PCB Layers page 1](docs/images/pcb-layers-001.png)
+
+**Page 2**
+
+![Individual PCB Layers page 2](docs/images/pcb-layers-002.png)
+
+**Page 3**
+
+![Individual PCB Layers page 3](docs/images/pcb-layers-003.png)
+
+**Page 4**
+
+![Individual PCB Layers page 4](docs/images/pcb-layers-004.png)
+
+[View vector PDF](docs/pdf/pcb-layers.pdf)
+<!-- AUTO-DOCS-END -->
