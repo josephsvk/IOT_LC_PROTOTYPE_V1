@@ -44835,30 +44835,6 @@
 		(uuid "0a865059-ea8a-4768-a01a-080892243a8c")
 	)
 	(gr_rect
-		(start 76.65 123.8)
-		(end 85.75 125.8)
-		(radius 1)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "452740c3-1aa4-48b4-8a5b-37b916249203")
-	)
-	(gr_rect
-		(start 80.1 120.35)
-		(end 82.1 129.45)
-		(radius 1)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill no)
-		(layer "Edge.Cuts")
-		(uuid "293ac1c7-c382-4bca-8a96-4236baa66db5")
-	)
-	(gr_rect
 		(start 82.4 110.55)
 		(end 101.7 112.55)
 		(radius 1)
