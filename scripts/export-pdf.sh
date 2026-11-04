@@ -1,74 +1,108 @@
-
 #!/usr/bin/env bash
+# ============================================================
+# KiCad Documentation Export
+# ============================================================
+# Generates vector PDFs and PNG previews for GitHub README.
+#
+# Outputs:
+#   docs/pdf/schematic.pdf
+#   docs/pdf/pcb-front.pdf
+#   docs/pdf/pcb-back.pdf
+#   docs/pdf/pcb-layers.pdf
+#
+#   docs/images/schematic.png
+#   docs/images/pcb-front.png
+#   docs/images/pcb-back.png
+#
+# Requirements:
+#   - KiCad CLI 10
+#   - poppler-utils (pdftoppm)
+#
+# Usage:
+#   ./scripts/export-pdf.sh
+# ============================================================
+
 set -Eeuo pipefail
 
-# Project configuration
 PROJECT="IOT_LC_PROTOTYPE_V1"
-
-# Resolve project root relative to this script
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-OUT="$ROOT/docs/pdf"
 
-SCHEMATIC="$ROOT/$PROJECT.kicad_sch"
+PDF_DIR="$ROOT/docs/pdf"
+IMG_DIR="$ROOT/docs/images"
+
+SCH="$ROOT/$PROJECT.kicad_sch"
 PCB="$ROOT/$PROJECT.kicad_pcb"
 
-# Validate dependencies
-command -v kicad-cli >/dev/null || {
-    echo "ERROR: kicad-cli is not installed"
+# Verify dependencies and project files
+for CMD in kicad-cli pdftoppm; do
+    command -v "$CMD" >/dev/null || {
+        echo "Missing dependency: $CMD"
+        exit 1
+    }
+done
+
+[[ -f "$SCH" && -f "$PCB" ]] || {
+    echo "KiCad project files not found"
     exit 1
 }
 
-[[ -f "$SCHEMATIC" ]] || {
-    echo "ERROR: Schematic not found: $SCHEMATIC"
-    exit 1
-}
+mkdir -p "$PDF_DIR" "$IMG_DIR"
 
-[[ -f "$PCB" ]] || {
-    echo "ERROR: PCB not found: $PCB"
-    exit 1
-}
+echo "KiCad: $(kicad-cli version)"
 
-mkdir -p "$OUT"
-
-echo "KiCad version: $(kicad-cli version)"
-echo "Output directory: $OUT"
-
-# 1. Complete hierarchical schematic
-echo "[1/4] Exporting schematic..."
+# 1. Complete hierarchical schematic PDF
+echo "[1/5] Schematic PDF"
 
 kicad-cli sch export pdf \
     --no-background-color \
-    -o "$OUT/schematic.pdf" \
-    "$SCHEMATIC"
+    -o "$PDF_DIR/schematic.pdf" \
+    "$SCH"
 
-# 2. Front PCB view
-echo "[2/4] Exporting front PCB..."
+# 2. PCB front view
+echo "[2/5] PCB front PDF"
 
 kicad-cli pcb export pdf \
     --mode-single \
     --layers "F.Cu,F.SilkS,Edge.Cuts" \
-    -o "$OUT/pcb-front.pdf" \
+    --check-zones \
+    -o "$PDF_DIR/pcb-front.pdf" \
     "$PCB"
 
-# 3. Back PCB view
-echo "[3/4] Exporting back PCB..."
+# 3. PCB back view
+echo "[3/5] PCB back PDF"
 
 kicad-cli pcb export pdf \
     --mode-single \
     --layers "B.Cu,B.SilkS,Edge.Cuts" \
-    -o "$OUT/pcb-back.pdf" \
+    --check-zones \
+    -o "$PDF_DIR/pcb-back.pdf" \
     "$PCB"
 
-# 4. Individual PCB layers
-echo "[4/4] Exporting individual PCB layers..."
+# 4. Separate PCB layers in one PDF
+echo "[4/5] PCB multilayer PDF"
 
 kicad-cli pcb export pdf \
     --mode-multipage \
-    --layers "F.Cu,B.Cu,F.SilkS,B.SilkS,Edge.Cuts" \
+    --layers "F.Cu,B.Cu,F.SilkS,B.SilkS" \
     --common-layers "Edge.Cuts" \
-    -o "$OUT/pcb-layers.pdf" \
+    --check-zones \
+    -o "$PDF_DIR/pcb-layers.pdf" \
     "$PCB"
 
-echo
-echo "Export completed:"
-ls -lh "$OUT"/*.pdf
+# 5. Render first PDF page as a PNG preview
+echo "[5/5] PNG previews"
+
+for NAME in schematic pcb-front pcb-back; do
+    pdftoppm \
+        -f 1 \
+        -l 1 \
+        -singlefile \
+        -png \
+        -r 150 \
+        -scale-to 2400 \
+        "$PDF_DIR/$NAME.pdf" \
+        "$IMG_DIR/$NAME"
+done
+
+echo "Documentation export completed"
+ls -lh "$PDF_DIR"/*.pdf "$IMG_DIR"/*.png
