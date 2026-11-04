@@ -556,11 +556,20 @@
         "wire_width": 6
       },
       {
+        "clearance": 0.4,
+        "name": "CHASSIS_GND",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "tuning_profile": ""
+      },
+      {
         "clearance": 3.0,
         "line_style": 0,
         "name": "HV_MAINS",
         "pcb_color": "rgb(255, 0, 0)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 2.0,
         "tuning_profile": "",
@@ -572,7 +581,7 @@
         "line_style": 0,
         "name": "HV_SENSE",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.8,
         "tuning_profile": "",
@@ -584,7 +593,7 @@
         "line_style": 0,
         "name": "LOGIC_PWR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 4,
+        "priority": 5,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "tuning_profile": "",
@@ -597,7 +606,7 @@
         "line_style": 0,
         "name": "PWR_24V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.0,
         "tuning_profile": "",
@@ -609,7 +618,7 @@
         "clearance": 0.2,
         "name": "PWR_3V3",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
+        "priority": 6,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "tuning_profile": "",
@@ -620,7 +629,7 @@
         "clearance": 0.2,
         "name": "PWR_5V",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.0,
         "tuning_profile": "",
@@ -631,7 +640,7 @@
         "clearance": 0.3,
         "name": "PWR_SW",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 6,
+        "priority": 7,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.0,
         "tuning_profile": ""
@@ -641,7 +650,7 @@
         "line_style": 0,
         "name": "SIGNAL",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 7,
+        "priority": 8,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "tuning_profile": "",
@@ -683,6 +692,10 @@
       {
         "netclass": "PWR_SW",
         "pattern": "SW_*"
+      },
+      {
+        "netclass": "CHASSIS_GND",
+        "pattern": "*CHASSIS*"
       }
     ]
   },
@@ -1033,7 +1046,7 @@
         "uuid": "59331ef0-31b4-4adf-874b-2f71b754f421"
       }
     ],
-    "used_designators": "#PWR801,C1-7,C101-105,C301-314,C401-406,C501-505,C601-605,C801-802,CN1,CN101-104,CN301,CN401,D1-3,D101-104,D301-302,D401-402,D801,D803,F801-802,FH1,FH301,FH401-402,H301-304,J301,L1,L401,L501,L601,LED1,PS301,Q801-804,R1-4,R101-118,R201,R301-307,R401-411,R501-502,R601-602,R801-809,R901-912,SW401-402,TP401-406,U1-5,U101-105,U201-203,U301-303,U401-404,U501,U601,U801,U901,USB401-402",
+    "used_designators": "#PWR801,C1-7,C101-105,C301-314,C401-406,C501-505,C601-605,C801-802,CN1,CN101-104,CN301,CN401,D1-3,D101-104,D301-302,D401-402,D801,D803,F801-802,FH1,FH301,FH401-402,H301-304,J301,L1,L401,L501,L601,LED1,PS301,Q801-804,R1-4,R101-118,R201,R301-307,R401-412,R501-502,R601-602,R801-809,R901-912,SW401-402,TP401-406,U1-5,U101-105,U201-203,U301-303,U401-404,U501,U601,U801,U901,USB401-402",
     "variants": [
       {
         "name": "hlk"
