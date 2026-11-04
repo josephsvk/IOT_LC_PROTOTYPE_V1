@@ -1,108 +1,103 @@
+
 #!/usr/bin/env bash
-# ============================================================
-# KiCad Documentation Export
-# ============================================================
-# Generates vector PDFs and PNG previews for GitHub README.
+# KiCad documentation generator
 #
-# Outputs:
-#   docs/pdf/schematic.pdf
-#   docs/pdf/pcb-front.pdf
-#   docs/pdf/pcb-back.pdf
-#   docs/pdf/pcb-layers.pdf
+# Exports:
+#   - Complete hierarchical schematic PDF
+#   - Individual schematic file PDFs
+#   - Front and back PCB PDFs
+#   - Multi-page PCB layer PDF
+#   - Cropped PNG previews
+#   - Dynamic README gallery
 #
-#   docs/images/schematic.png
-#   docs/images/pcb-front.png
-#   docs/images/pcb-back.png
-#
-# Requirements:
-#   - KiCad CLI 10
-#   - poppler-utils (pdftoppm)
-#
-# Usage:
-#   ./scripts/export-pdf.sh
-# ============================================================
+# Usage: ./scripts/export-pdf.sh
 
 set -Eeuo pipefail
 
-PROJECT="IOT_LC_PROTOTYPE_V1"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT"
 
+PROJECT="IOT_LC_PROTOTYPE_V1"
 PDF_DIR="$ROOT/docs/pdf"
+SCH_DIR="$PDF_DIR/sheets"
 IMG_DIR="$ROOT/docs/images"
 
-SCH="$ROOT/$PROJECT.kicad_sch"
-PCB="$ROOT/$PROJECT.kicad_pcb"
-
-# Verify dependencies and project files
-for CMD in kicad-cli pdftoppm; do
-    command -v "$CMD" >/dev/null || {
-        echo "Missing dependency: $CMD"
+for cmd in kicad-cli pdftoppm pdfinfo python3; do
+    command -v "$cmd" >/dev/null || {
+        echo "Missing dependency: $cmd"
         exit 1
     }
 done
 
-[[ -f "$SCH" && -f "$PCB" ]] || {
-    echo "KiCad project files not found"
+python3 -c "from PIL import Image" || {
+    echo "Install python3-pil"
     exit 1
 }
 
-mkdir -p "$PDF_DIR" "$IMG_DIR"
+mkdir -p "$SCH_DIR" "$IMG_DIR"
 
-echo "KiCad: $(kicad-cli version)"
-
-# 1. Complete hierarchical schematic PDF
-echo "[1/5] Schematic PDF"
+# Main hierarchical schematic
+echo "[1/4] Complete schematic"
 
 kicad-cli sch export pdf \
     --no-background-color \
     -o "$PDF_DIR/schematic.pdf" \
-    "$SCH"
+    "$ROOT/$PROJECT.kicad_sch"
 
-# 2. PCB front view
-echo "[2/5] PCB front PDF"
+# Each schematic source file independently
+echo "[2/4] Individual schematic files"
+
+find "$ROOT" \
+    \( -name .git -o -name .history \
+       -o -name docs -o -name production \
+       -o -name '*-backups' \
+       -o -name '_restore_backup_*' \) -prune -o \
+    -name '*.kicad_sch' -type f -print0 |
+while IFS= read -r -d '' file; do
+    relative="${file#"$ROOT"/}"
+    output="$SCH_DIR/${relative%.kicad_sch}.pdf"
+
+    mkdir -p "$(dirname "$output")"
+
+    echo "Exporting $relative"
+
+    if ! kicad-cli sch export pdf \
+        --no-background-color \
+        -o "$output" \
+        "$file"; then
+        echo "WARNING: Could not export $relative" >&2
+        rm -f "$output"
+    fi
+done
+
+# PCB export
+echo "[3/4] PCB documentation"
+
+PCB="$ROOT/$PROJECT.kicad_pcb"
 
 kicad-cli pcb export pdf \
     --mode-single \
     --layers "F.Cu,F.SilkS,Edge.Cuts" \
     --check-zones \
-    -o "$PDF_DIR/pcb-front.pdf" \
-    "$PCB"
-
-# 3. PCB back view
-echo "[3/5] PCB back PDF"
+    -o "$PDF_DIR/pcb-front.pdf" "$PCB"
 
 kicad-cli pcb export pdf \
     --mode-single \
     --layers "B.Cu,B.SilkS,Edge.Cuts" \
     --check-zones \
-    -o "$PDF_DIR/pcb-back.pdf" \
-    "$PCB"
-
-# 4. Separate PCB layers in one PDF
-echo "[4/5] PCB multilayer PDF"
+    -o "$PDF_DIR/pcb-back.pdf" "$PCB"
 
 kicad-cli pcb export pdf \
     --mode-multipage \
     --layers "F.Cu,B.Cu,F.SilkS,B.SilkS" \
     --common-layers "Edge.Cuts" \
     --check-zones \
-    -o "$PDF_DIR/pcb-layers.pdf" \
-    "$PCB"
+    -o "$PDF_DIR/pcb-layers.pdf" "$PCB"
 
-# 5. Render first PDF page as a PNG preview
-echo "[5/5] PNG previews"
+# Generate images and README
+echo "[4/4] README gallery"
 
-for NAME in schematic pcb-front pcb-back; do
-    pdftoppm \
-        -f 1 \
-        -l 1 \
-        -singlefile \
-        -png \
-        -r 150 \
-        -scale-to 2400 \
-        "$PDF_DIR/$NAME.pdf" \
-        "$IMG_DIR/$NAME"
-done
+python3 "$ROOT/scripts/generate-readme.py"
 
-echo "Documentation export completed"
-ls -lh "$PDF_DIR"/*.pdf "$IMG_DIR"/*.png
+echo "Documentation generated successfully."
+
