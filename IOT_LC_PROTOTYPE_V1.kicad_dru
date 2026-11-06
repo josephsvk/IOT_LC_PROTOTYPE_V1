@@ -5,6 +5,17 @@
     (condition "A.Net == 'LOGIC_GND' && B.Net == '24V'")
     (constraint clearance (min 0.5mm))
 )
+
+(rule "24V_main_width"
+    (condition "A.hasNetclass('PWR_24V')")
+    (constraint track_width (min 1mm) (opt 1mm))
+)
+
+(rule "24V_neckdown"
+    (condition "A.hasNetclass('PWR_24V') && A.insideArea('24V_NECKDOWN')")
+    (constraint track_width (min 0.25mm) (opt 0.25mm))
+)
+
 (rule "AC clearance"
   (constraint clearance (min 1.8mm))
   (condition "A.NetClass == 'HV_MAINS' && B.NetClass == 'HV_MAINS' && A.Net != B.Net")
