@@ -38739,9 +38739,9 @@
 	(footprint "EasyEDA:R1206"
 		(layer "B.Cu")
 		(uuid "c4bd72cf-2c9c-4bb7-a788-a49a2d1e07e6")
-		(at 78 100.82)
+		(at 70.25 100.5)
 		(property "Reference" "R404"
-			(at 0 2 0)
+			(at 4.5 0 0)
 			(layer "B.SilkS")
 			(uuid "36f56afd-3297-49a1-8a22-07b0d9982ddd")
 			(effects
@@ -41085,9 +41085,9 @@
 	(footprint "EasyEDA:R1206"
 		(layer "B.Cu")
 		(uuid "dec9ae53-400b-49fe-9b8e-51676072485c")
-		(at 78 105.12)
+		(at 70.25 103)
 		(property "Reference" "R405"
-			(at 0 2 0)
+			(at 4.75 0.25 0)
 			(layer "B.SilkS")
 			(uuid "89dc35dd-a6b0-4395-8725-2ae834530ac6")
 			(effects
@@ -41525,7 +41525,7 @@
 	(footprint "EasyEDA:SOD-123F_L2.8-W1.8-LS3.7-RD"
 		(layer "B.Cu")
 		(uuid "e41e5fde-8c07-48da-93d9-8decedc3bd24")
-		(at 65.7 105.5)
+		(at 65.7 106.5)
 		(property "Reference" "D402"
 			(at 3.9 0 0)
 			(layer "B.SilkS")
@@ -49358,14 +49358,6 @@
 		(uuid "eae9dfd0-6583-4514-ad25-82aa084b58c2")
 	)
 	(segment
-		(start 64.05 105.5)
-		(end 63.69 105.14)
-		(width 0.25)
-		(layer "B.Cu")
-		(net "/ESP32-S3-WROOM-1U-N16R8/USB_VBUS")
-		(uuid "07fe6921-e8a9-4cab-b54c-246f7a8d7a3f")
-	)
-	(segment
 		(start 60.72 105.14)
 		(end 60.71 105.15)
 		(width 0.25)
@@ -49375,12 +49367,12 @@
 		(uuid "2f2a6be0-733b-4efc-b7b7-2c5e4566b4ce")
 	)
 	(segment
-		(start 63.69 105.14)
-		(end 62.06 105.14)
+		(start 62.69 105.14)
+		(end 64.05 106.5)
 		(width 0.25)
 		(layer "B.Cu")
 		(net "/ESP32-S3-WROOM-1U-N16R8/USB_VBUS")
-		(uuid "3486f78c-38af-4e4d-a47b-a0c4efd15d5e")
+		(uuid "3482eb6d-e620-42ab-8eb0-3df9432ad508")
 	)
 	(segment
 		(start 62.06 100.9)
@@ -49397,6 +49389,14 @@
 		(layer "B.Cu")
 		(net "/ESP32-S3-WROOM-1U-N16R8/USB_VBUS")
 		(uuid "40dcaf63-0175-4643-82f2-8f379881a87f")
+	)
+	(segment
+		(start 62.06 105.14)
+		(end 62.69 105.14)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "/ESP32-S3-WROOM-1U-N16R8/USB_VBUS")
+		(uuid "7359f02a-84f9-48a1-8e98-ac7c01fa3591")
 	)
 	(segment
 		(start 64.95 99.22)
@@ -49473,13 +49473,20 @@
 		(uuid "5fab9661-1564-461c-a61c-24bd4b3ee799")
 	)
 	(segment
-		(start 62.06 103.44)
-		(end 62.119239 103.44)
+		(start 62.119239 103.44)
+		(end 62.06917 103.44)
 		(width 0.25)
-		(locked yes)
 		(layer "B.Cu")
 		(net "/ESP32-S3-WROOM-1U-N16R8/USB_DN_CONN")
-		(uuid "929fac6b-5ed3-43b8-957c-8cc209c63a10")
+		(uuid "0967cc94-1c4f-4dbc-9309-00efe86d608b")
+	)
+	(segment
+		(start 62.06917 103.44)
+		(end 62.06 103.44)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "/ESP32-S3-WROOM-1U-N16R8/USB_DN_CONN")
+		(uuid "d95cef0a-dadf-418a-a390-b922db218734")
 	)
 	(segment
 		(start 59.2 103.249619)
@@ -50998,6 +51005,22 @@
 		(uuid "d4fa1fec-7599-45e7-a418-108b0844fd42")
 	)
 	(segment
+		(start 94.47 89.59)
+		(end 94.47 91.13)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "/ESP32-S3-WROOM-1U-N16R8/DP")
+		(uuid "243af873-f994-4f4c-9d8c-8abd50481a48")
+	)
+	(segment
+		(start 94.47 91.13)
+		(end 94.2 91.4)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "/ESP32-S3-WROOM-1U-N16R8/DP")
+		(uuid "3777b067-7b46-411e-9df4-936b0bf26812")
+	)
+	(segment
 		(start 115.5 97.5)
 		(end 121.58 103.58)
 		(width 0.25)
@@ -51877,22 +51900,6 @@
 		(net "Net-(PS301-SW1-Pad22)")
 		(uuid "3a89b643-60c9-4dcd-bb78-ece906af7368")
 	)
-	(segment
-		(start 94.47 89.59)
-		(end 94.47 91.13)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "/ESP32-S3-WROOM-1U-N16R8/DP")
-		(uuid "243af873-f994-4f4c-9d8c-8abd50481a48")
-	)
-	(segment
-		(start 94.47 91.13)
-		(end 94.2 91.4)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "/ESP32-S3-WROOM-1U-N16R8/DP")
-		(uuid "3777b067-7b46-411e-9df4-936b0bf26812")
-	)
 	(zone
 		(net "LOGIC_GND")
 		(locked yes)
@@ -52107,6 +52114,48 @@
 			"e3e9c4d6-a7ac-4047-8607-59d0735c5b10" "ebd085e5-8b76-4143-a5ec-4cabe06688eb"
 			"f70eb895-28bf-4aa1-a627-4a651e23422d" "f977e4da-a29d-4833-97cc-1cb12e71090b"
 		)
+	)
+	(generated
+		(uuid "a0d70c7a-44cf-4c92-bdc1-203d407c834a")
+		(type tuning_pattern)
+		(name "Tuning Pattern")
+		(layer "B.Cu")
+		(base_line
+			(pts
+				(xy 62.119239 103.44) (xy 62.06917 103.44)
+			)
+		)
+		(corner_radius_percent 80)
+		(end
+			(xy 62.06917 103.44)
+		)
+		(initial_side "right")
+		(is_time_domain no)
+		(last_diff_pair_gap 0.18)
+		(last_netname "/ESP32-S3-WROOM-1U-N16R8/USB_DN_CONN")
+		(last_status "tuned")
+		(last_track_width 0.25)
+		(last_tuning_length 3.377361)
+		(max_amplitude 1)
+		(min_amplitude 0.2)
+		(min_spacing 0.6)
+		(origin
+			(xy 62.119239 103.44)
+		)
+		(override_custom_rules no)
+		(rounded yes)
+		(single_sided no)
+		(target_delay 1000000)
+		(target_delay_max 1000000)
+		(target_delay_min 0)
+		(target_length 1000000)
+		(target_length_max 1000000)
+		(target_length_min 0)
+		(target_skew 0)
+		(target_skew_max 0.1)
+		(target_skew_min -0.1)
+		(tuning_mode "single")
+		(members "0967cc94-1c4f-4dbc-9309-00efe86d608b")
 	)
 	(embedded_fonts no)
 )
