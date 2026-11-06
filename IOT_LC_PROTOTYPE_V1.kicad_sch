@@ -5444,7 +5444,7 @@
 		)
 		(uuid "77743a2c-7544-4243-a72b-13efdb8bc650")
 	)
-	(label "INDEX"
+	(label "POLLEX"
 		(at 196.596 114.554 180)
 		(effects
 			(font
@@ -5504,7 +5504,7 @@
 		)
 		(uuid "bff629f6-e0c3-4f84-ab31-52cc3b70fff2")
 	)
-	(label "POLLEX"
+	(label "INDEX"
 		(at 196.596 84.074 180)
 		(effects
 			(font
