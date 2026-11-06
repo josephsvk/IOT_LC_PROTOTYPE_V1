@@ -579,12 +579,12 @@
         "via_diameter": 1.0
       },
       {
-        "clearance": 0.2,
+        "clearance": 0.1,
         "name": "DP_90R",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 1.0,
         "tuning_profile": ""
       },
       {
@@ -688,14 +688,7 @@
       "version": 5
     },
     "net_colors": {},
-    "netclass_assignments": {
-      "/ESP32-S3-WROOM-1U-N16R8/DN": [
-        "DP_90R"
-      ],
-      "/ESP32-S3-WROOM-1U-N16R8/DP": [
-        "DP_90R"
-      ]
-    },
+    "netclass_assignments": {},
     "netclass_patterns": [
       {
         "netclass": "LOGIC_PWR",
@@ -732,6 +725,10 @@
       {
         "netclass": " GND",
         "pattern": "*LOGIC_GND*"
+      },
+      {
+        "netclass": "DP_90R",
+        "pattern": "*DP_90R*"
       }
     ]
   },
