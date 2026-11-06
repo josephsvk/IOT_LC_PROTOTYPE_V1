@@ -582,10 +582,10 @@
       {
         "clearance": 0.1,
         "diff_pair_gap": 0.1,
-        "diff_pair_width": 1.0,
+        "diff_pair_width": 1.2,
         "line_style": 1,
         "name": "DP_90R",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(255, 10, 232)",
         "priority": 0,
         "schematic_color": "rgb(243, 15, 255)",
         "track_width": 0.6,
