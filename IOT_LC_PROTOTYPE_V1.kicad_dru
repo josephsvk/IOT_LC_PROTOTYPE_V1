@@ -1,10 +1,18 @@
+
 (version 1)
 
+# ==========================================
+# 24V / LOGIC_GND
+# ==========================================
 
 (rule "LOGIC_GND to 24V clearance"
     (condition "A.Net == 'LOGIC_GND' && B.Net == '24V'")
     (constraint clearance (min 0.5mm))
 )
+
+# ==========================================
+# 24V TRACK WIDTH
+# ==========================================
 
 (rule "24V_main_width"
     (condition "A.hasNetclass('PWR_24V')")
@@ -12,21 +20,33 @@
 )
 
 (rule "24V_neckdown"
-    (condition "A.hasNetclass('PWR_24V') && A.insideArea('24V_NECKDOWN')")
+    (condition "A.hasNetclass('PWR_24V') && A.intersectsArea('24V_NECKDOWN')")
     (constraint track_width (min 0.25mm) (opt 0.25mm))
 )
 
-(rule "AC clearance"
-  (constraint clearance (min 1.8mm))
-  (condition "A.NetClass == 'HV_MAINS' && B.NetClass == 'HV_MAINS' && A.Net != B.Net")
+# ==========================================
+# 230V AC - CLEARANCE
+# ==========================================
+
+(rule "AC_main_clearance"
+    (condition "A.hasNetclass('HV_MAINS') && B.hasNetclass('HV_MAINS') && A.Net != B.Net")
+    (constraint clearance (min 3mm))
 )
 
-(rule "AC creepage"
-  (constraint creepage (min 3.2mm))
-  (condition "A.NetClass == 'HV_MAINS' && B.NetClass == 'HV_MAINS' && A.Net != B.Net")
+# ==========================================
+# 230V AC - LOCAL CLEARANCE
+# ==========================================
+
+(rule "AC_local_2mm"
+    (condition "A.hasNetclass('HV_MAINS') && B.hasNetclass('HV_MAINS') && A.Net != B.Net && A.intersectsArea('AC_2MM') && B.intersectsArea('AC_2MM')")
+    (constraint clearance (min 2mm))
 )
 
-(rule "PWR_24V_MIN_WIDTH"
-  (constraint track_width (min 1mm))
-  (condition "A.NetClass == 'PWR_24V'")
+# ==========================================
+# 230V AC - CREEPAGE
+# ==========================================
+
+(rule "AC_creepage"
+    (condition "A.hasNetclass('HV_MAINS') && B.hasNetclass('HV_MAINS') && A.Net != B.Net")
+    (constraint creepage (min 3.2mm))
 )
