@@ -580,10 +580,11 @@
       },
       {
         "clearance": 0.1,
+        "line_style": 1,
         "name": "DP_90R",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(243, 15, 255)",
         "track_width": 1.0,
         "tuning_profile": ""
       },
@@ -695,10 +696,13 @@
       "/ESP32-S3-WROOM-1U-N16R8/DP": [
         "DP_90R"
       ],
-      "/ESP32-S3-WROOM-1U-N16R8/USB_DN_CONN": [
+      "/ESP32-S3-WROOM-1U-N16R8/USB_CONN_N": [
         "DP_90R"
       ],
-      "/ESP32-S3-WROOM-1U-N16R8/USB_DP_CONN": [
+      "/ESP32-S3-WROOM-1U-N16R8/USB_CONN_P": [
+        "DP_90R"
+      ],
+      "/ESP32-S3-WROOM-1U-N16R8/USB_N": [
         "DP_90R"
       ]
     },
