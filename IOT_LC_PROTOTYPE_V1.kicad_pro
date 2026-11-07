@@ -87,10 +87,6 @@
           "double mountings"
         ],
         [
-          "invalid_outline|100700000|111550000|f6bda09e-3744-47c2-83d4-5dba6a8a5d93|324efe95-d191-484b-9da3-391b9540a4c3",
-          ""
-        ],
-        [
           "invalid_outline|80800000|125100000|1744e94b-1474-4753-a953-06c8598a231b|489f1a78-29d4-4e1f-a9c5-a86557a35795",
           ""
         ],
@@ -1094,13 +1090,7 @@
       "dashed_lines_gap_length_ratio": 3.0,
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
-      "field_names": [
-        {
-          "name": "label",
-          "url": false,
-          "visible": true
-        }
-      ],
+      "field_names": [],
       "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
