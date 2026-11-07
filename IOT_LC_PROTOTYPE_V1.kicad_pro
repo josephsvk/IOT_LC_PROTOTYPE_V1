@@ -795,7 +795,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "test",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
