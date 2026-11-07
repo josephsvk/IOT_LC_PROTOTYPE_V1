@@ -4175,7 +4175,7 @@
 	)
 	(text_box "1	24V	FIELD 24 V\n2	24V	Paralelné napájanie\n3	GND	FIELD GND\n4	GND	FIELD GND\n5	5V	FIELD 5 V\n6	5V	Paralelné napájanie\n7	NC	Rezerva\n8	NC	Rezerva\n9	24V_LOGIC	LOGIC 24 V\n10	24V_LOGIC	Paralelné napájanie\n11	LOGIC_GND	Logická zem\n12	LOGIC_GND	Logická zem\n13	NC	Rezerva\n14	NC	Rezerva\n15	24V_BATT	Batériová vetva 24 V\n16	5V_BATT	Batériová vetva 5 V\n17	BATT_GND	Batériová zem\n18	BATT_GND	Batériová zem\n19	5V_LOGIC	LOGIC 5 V\n20	LOGIC_GND	Logická zem\n21	NC	Rezerva\n22	NC	Rezerva\n23	I2C_SCL	I²C hodinový signál\n24	I2C_SDA	I²C dátový signál\n25	NC	Rezerva pre budúce IRQ\n26	NC	Rezerva\n27	SPI_SCK	SPI clock\n28	LOGIC_GND	Referenčná zem SPI\n29	SPI_MOSI	SPI controller → periféria\n30	SPI_MISO	SPI periféria → controller\n31	SPI_CS0	Výber SPI zariadenia 0\n32	SPI_CS1	Výber SPI zariadenia 1\n33	SPI_DC	Display Data/Command\n34	LOGIC_GND	Referenčná zem SPI\n35	NC	Rezerva\n36	RS485_GND	Referenčná zem RS-485\n37	RS485_A	Diferenciálna linka A\n38	RS485_B	Diferenciálna linka B\n39	NC	Rezerva\n40	NC	Rezerva"
 		(exclude_from_sim no)
-		(at -2.54 -23.1708 0)
+		(at 17.78 22.5492 0)
 		(size 55.88 89.2108)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
