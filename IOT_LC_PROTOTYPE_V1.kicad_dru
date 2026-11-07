@@ -21,7 +21,7 @@
 
 (rule "24V_neckdown"
     (condition "A.hasNetclass('PWR_24V') && A.intersectsArea('24V_NECKDOWN')")
-    (constraint track_width (min 0.25mm) (opt 0.25mm))
+    (constraint track_width (min 0.2mm) (opt 0.25mm))
 )
 
 # ==========================================

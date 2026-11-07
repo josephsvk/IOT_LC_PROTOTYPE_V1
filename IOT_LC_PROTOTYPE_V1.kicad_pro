@@ -81,7 +81,56 @@
           "width": 8.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|141045000|111855000|2201326a-28a4-45c7-821a-d5e9eef407a2|64f7d6fb-65fb-4332-b973-c1a318dd7f05",
+          "double mountings"
+        ],
+        [
+          "invalid_outline|100700000|111550000|f6bda09e-3744-47c2-83d4-5dba6a8a5d93|324efe95-d191-484b-9da3-391b9540a4c3",
+          ""
+        ],
+        [
+          "invalid_outline|80800000|125100000|1744e94b-1474-4753-a953-06c8598a231b|489f1a78-29d4-4e1f-a9c5-a86557a35795",
+          ""
+        ],
+        [
+          "pth_inside_courtyard|138150000|115680000|f710503d-fcf3-4616-88a0-200a29b1e562|2201326a-28a4-45c7-821a-d5e9eef407a2",
+          "double mountings"
+        ],
+        [
+          "pth_inside_courtyard|138150000|136000000|d914fa53-b6e4-4be5-b3cb-e89477d97ba9|2201326a-28a4-45c7-821a-d5e9eef407a2",
+          "double mountings"
+        ],
+        [
+          "pth_inside_courtyard|141500000|128100000|d8c7a278-b44b-450a-ae07-d77ba8840e40|64f7d6fb-65fb-4332-b973-c1a318dd7f05",
+          "double mountings"
+        ],
+        [
+          "pth_inside_courtyard|141500000|136100000|6663af12-89fb-46dc-abbc-d87289489ab9|64f7d6fb-65fb-4332-b973-c1a318dd7f05",
+          "double mountings"
+        ],
+        [
+          "pth_inside_courtyard|96450000|118220000|dac26fbf-d688-43b0-9a99-df6deabd265e|2201326a-28a4-45c7-821a-d5e9eef407a2",
+          "double mountings"
+        ],
+        [
+          "pth_inside_courtyard|96450000|136000000|34e63945-6237-4e91-93d8-70eeaac98a57|2201326a-28a4-45c7-821a-d5e9eef407a2",
+          "double mountings"
+        ],
+        [
+          "pth_inside_courtyard|96500000|115300000|ad5648a6-73b8-4f68-a477-ac521a7c9b8b|64f7d6fb-65fb-4332-b973-c1a318dd7f05",
+          "double mountings"
+        ],
+        [
+          "pth_inside_courtyard|96500000|136100000|d2edc753-6709-47c0-9a3a-fdb4eef80fbd|64f7d6fb-65fb-4332-b973-c1a318dd7f05",
+          "double mountings"
+        ],
+        [
+          "starved_thermal|119500000|127607500|0bf26ccb-3fb1-4ec4-8bc2-98446797d902|7c5f3609-1cc7-4e0c-b24f-50b13b903681|B.Cu",
+          "It doesn't make sense"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -153,7 +202,7 @@
         "max_error": 0.005,
         "min_clearance": 0.1,
         "min_connection": 0.15,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.45,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
@@ -165,7 +214,7 @@
         "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.15,
-        "min_via_annular_width": 0.15,
+        "min_via_annular_width": 0.12,
         "min_via_diameter": 0.4,
         "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
@@ -1093,7 +1142,7 @@
         "uuid": "59331ef0-31b4-4adf-874b-2f71b754f421"
       }
     ],
-    "used_designators": "#PWR801,C1-7,C101-105,C301-314,C401-406,C501-505,C601-605,C801-802,CN1,CN101-104,CN301,CN401,D1-3,D101-104,D301-302,D401-402,D801,D803,F801-802,FH1,FH301,FH401-402,H301-304,J301,L1,L401,L501,L601,LED1,PS301,Q801-804,R1-4,R101-121,R201,R301-307,R401-412,R501-502,R601-602,R801-809,R901-912,SW401-402,TP401-406,U1-5,U101-105,U201-203,U301-303,U401-404,U501,U601,U801,U901,USB401-402",
+    "used_designators": "#PWR801,C1-7,C101-107,C301-314,C401-407,C501-505,C601-605,C801-802,CN1,CN101-104,CN301,CN401,D1-3,D101-104,D301-302,D401-403,D801,D803,F801-802,FH1,FH301,FH401-402,H301-304,J301,L1,L401,L501,L601,LED1,PS301,Q801-804,R1-4,R101-122,R201,R301-307,R401-413,R501-502,R601-602,R801-809,R901-912,SW401-402,TP401-406,U1-5,U101-105,U201-203,U301-303,U401-404,U501,U601,U801,U901,USB401-402",
     "variants": [
       {
         "name": "hlk"

@@ -74,6 +74,9 @@ def main():
         raise ValueError('README has inconsistent AUTO-DOCS markers')
     else:
         data = data.rstrip() + '\n\n' + generated + '\n'
+    # Keep generated output compatible with the pusher's staged whitespace check.
+    # Normalize the whole file because hand-maintained text surrounds the gallery.
+    data = '\n'.join(line.rstrip() for line in data.splitlines()) + '\n'
     README.write_text(data, encoding='utf-8')
     print('README gallery updated')
 

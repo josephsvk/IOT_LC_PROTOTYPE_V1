@@ -1,5 +1,16 @@
 # IOT_LC_PROTOTYPE_V1
 
+## Requirements typically met:
+
+	- USB Pair > 92.51 ohm Zd
+	- AC insulation using 2 mm cutouts in the board; the rest is 3 mm , OVC III, PD2
+	- Option to install two different 24V power sources
+	- Properly designed GND boards and VIAS , zone minimum width 0.3 mm
+	- The area under the antenna connector has been cleaned
+	-
+
+
+
 Modular IoT controller — custom PCB hardware project designed in KiCad 10.
 
 **Status:** Work in progress — prototype, not validated for production.

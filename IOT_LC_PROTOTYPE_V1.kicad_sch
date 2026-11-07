@@ -2587,6 +2587,351 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "EasyEDA:CRCW12061M00FKEA"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CRCW12061M00FKEA"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "EasyEDA:R1206"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Vishay-Intertech-CRCW12061M00FKEA_C844869.html"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "VISHAY(威世)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "CRCW12061M00FKEA"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C844869"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Resistors"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CRCW12061M00FKEA_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "EasyEDA:DE1E3RA102MA4BN01F"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "DE1E3RA102MA4BN01F"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "EasyEDA:CAP-TH_L7.0-W4.0-P10.00-D0.6"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C373381.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "muRata(村田)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "DE1E3RA102MA4BN01F"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C373381"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Suppression Capacitors"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "DE1E3RA102MA4BN01F_0_1"
+				(polyline
+					(pts
+						(xy -0.51 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.51 -2.03) (xy -0.51 2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.51 2.03) (xy 0.51 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 0.51 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "EasyEDA:ERA-3AEB103V"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3849,6 +4194,12 @@
 		(uuid "ccf7b9d0-0d14-47d0-a39f-b43b25a978ab")
 	)
 	(junction
+		(at 125.73 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00cc35a5-f20d-4e80-be43-76d2fd9c5aad")
+	)
+	(junction
 		(at 364.49 204.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3951,6 +4302,12 @@
 		(uuid "a5950ff2-1f86-4fe0-b389-dd2552a5be18")
 	)
 	(junction
+		(at 130.81 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a60c811d-a7cf-4511-8417-daca78bd17e2")
+	)
+	(junction
 		(at 221.996 177.546)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3961,6 +4318,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "db612730-10cc-4515-bb52-f38eea902916")
+	)
+	(junction
+		(at 125.73 173.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed2c0d4e-dcfe-4fbf-bbbf-0857ecb06da9")
 	)
 	(junction
 		(at 364.49 154.94)
@@ -4206,6 +4569,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 163.83) (xy 144.78 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2692049d-4af1-4fe9-9aee-6d4abd62802e")
+	)
+	(wire
+		(pts
 			(xy 221.996 145.796) (xy 221.996 135.636)
 		)
 		(stroke
@@ -4276,6 +4649,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 173.99) (xy 125.73 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31e39a2a-c645-497b-81ec-c3ccc0262df4")
+	)
+	(wire
+		(pts
 			(xy 114.3 228.6) (xy 109.22 228.6)
 		)
 		(stroke
@@ -4306,6 +4689,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 171.45) (xy 130.81 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38455dd6-9d61-47d6-b12a-c1d47aa5fe8e")
+	)
+	(wire
+		(pts
 			(xy 204.216 73.406) (xy 206.756 73.406)
 		)
 		(stroke
@@ -4316,7 +4709,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 142.24) (xy 134.62 142.24)
+			(xy 144.78 143.51) (xy 147.32 143.51)
 		)
 		(stroke
 			(width 0)
@@ -4393,6 +4786,16 @@
 			(type default)
 		)
 		(uuid "477e2497-4f0b-4ab5-81e5-d4c3962f6466")
+	)
+	(wire
+		(pts
+			(xy 125.73 158.75) (xy 125.73 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "481c88bf-0e3f-4a40-91bb-39267f9ae615")
 	)
 	(wire
 		(pts
@@ -4596,7 +4999,17 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 147.32) (xy 124.46 147.32)
+			(xy 130.81 158.75) (xy 130.81 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a48a02f-3277-48d2-9024-ec95b892b501")
+	)
+	(wire
+		(pts
+			(xy 134.62 148.59) (xy 137.16 148.59)
 		)
 		(stroke
 			(width 0)
@@ -4653,16 +5066,6 @@
 			(type default)
 		)
 		(uuid "7ac312d1-5dd4-4901-aaf7-bedf2cd6dc2e")
-	)
-	(wire
-		(pts
-			(xy 130.81 161.29) (xy 134.62 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ad6ecd2-5efa-4c0c-a3e6-16085b050c45")
 	)
 	(wire
 		(pts
@@ -4786,6 +5189,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 173.99) (xy 125.73 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94186590-57ed-48df-94ef-3165fed1f0c9")
+	)
+	(wire
+		(pts
 			(xy 109.22 228.6) (xy 102.87 228.6)
 		)
 		(stroke
@@ -4866,7 +5279,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 142.24) (xy 121.92 142.24)
+			(xy 133.35 143.51) (xy 134.62 143.51)
 		)
 		(stroke
 			(width 0)
@@ -4976,6 +5389,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 173.99) (xy 125.73 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8ddf37b-e49e-45cf-be0f-4182d7ad2a3e")
+	)
+	(wire
+		(pts
 			(xy 199.136 145.796) (xy 200.406 145.796)
 		)
 		(stroke
@@ -4993,6 +5416,16 @@
 			(type default)
 		)
 		(uuid "bba7ae20-2793-436d-8a45-06fc7bcb7c9f")
+	)
+	(wire
+		(pts
+			(xy 130.81 158.75) (xy 147.32 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf30fd22-5bff-461c-8973-533a4b47f021")
 	)
 	(wire
 		(pts
@@ -5066,7 +5499,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 157.48) (xy 134.62 157.48)
+			(xy 121.92 158.75) (xy 130.81 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5206,7 +5639,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 152.4) (xy 134.62 152.4)
+			(xy 143.51 153.67) (xy 147.32 153.67)
 		)
 		(stroke
 			(width 0)
@@ -5253,6 +5686,16 @@
 			(type default)
 		)
 		(uuid "e81d696a-ac14-4c0f-8645-695d4b4d78cb")
+	)
+	(wire
+		(pts
+			(xy 144.78 162.56) (xy 147.32 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea55ed4a-ce55-41a6-a102-6f0b617860a3")
 	)
 	(wire
 		(pts
@@ -5642,7 +6085,7 @@
 	)
 	(global_label "24V_LOGIC"
 		(shape output)
-		(at 130.81 152.4 180)
+		(at 143.51 153.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5652,7 +6095,7 @@
 		)
 		(uuid "0ffdcb47-1a84-497e-ad16-03b2b6c56ef0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 117.8462 152.4 0)
+			(at 130.5462 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5858,7 +6301,7 @@
 	)
 	(global_label "LOGIC_3V3"
 		(shape output)
-		(at 120.65 142.24 180)
+		(at 133.35 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5868,7 +6311,7 @@
 		)
 		(uuid "2d5ae004-ed4e-45f2-bf0e-3ea0d396ff7e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 107.6862 142.24 0)
+			(at 120.3862 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5882,17 +6325,17 @@
 	)
 	(global_label "RS485_B"
 		(shape input)
-		(at 114.3 83.82 0)
+		(at 99.06 83.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "310558ae-b6bf-4fa8-9278-20ca0ff5304c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.6308 83.82 0)
+			(at 87.7292 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5900,7 +6343,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -5978,7 +6421,7 @@
 	)
 	(global_label "CHASSIS_GND"
 		(shape passive)
-		(at 130.81 157.48 180)
+		(at 121.92 158.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5988,7 +6431,7 @@
 		)
 		(uuid "416616f1-3901-4645-924c-d2995de65e2a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.1756 157.48 0)
+			(at 107.2856 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6026,17 +6469,17 @@
 	)
 	(global_label "RS485_A"
 		(shape input)
-		(at 99.06 83.82 180)
+		(at 114.3 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "448e7f15-75db-40ee-ba86-160bcc3f1f0c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 87.9106 83.82 0)
+			(at 125.4494 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6044,7 +6487,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
@@ -7130,6 +7573,30 @@
 	)
 	(global_label "LOGIC_GND"
 		(shape passive)
+		(at 120.65 173.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e15a11f6-3cde-4ad8-a445-b7feb86db76e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 108.4346 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "LOGIC_GND"
+		(shape passive)
 		(at 331.47 142.24 0)
 		(fields_autoplaced yes)
 		(effects
@@ -7346,7 +7813,7 @@
 	)
 	(global_label "5V_LOGIC"
 		(shape output)
-		(at 121.92 147.32 180)
+		(at 134.62 148.59 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7356,7 +7823,7 @@
 		)
 		(uuid "f59aada7-4601-4059-85d5-404aef55f23c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.1657 147.32 0)
+			(at 122.8657 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7370,7 +7837,7 @@
 	)
 	(global_label "LOGIC_GND"
 		(shape passive)
-		(at 130.81 161.29 180)
+		(at 144.78 163.83 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7380,7 +7847,7 @@
 		)
 		(uuid "f7123e28-c708-46f7-9dcd-82e6367d7179")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 118.5946 161.29 0)
+			(at 144.78 176.0454 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10803,7 +11270,7 @@
 	)
 	(symbol
 		(lib_id "EasyEDA:MBB02070Z0000ZC100")
-		(at 127 142.24 180)
+		(at 139.7 143.51 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10814,7 +11281,7 @@
 		(fields_autoplaced yes)
 		(uuid "66029077-6bab-47f3-a6b9-d7536c2ca971")
 		(property "Reference" "R121"
-			(at 127 135.89 0)
+			(at 139.7 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10824,7 +11291,7 @@
 			)
 		)
 		(property "Value" "MBB02070Z0000ZC100"
-			(at 127 138.43 0)
+			(at 139.7 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10834,7 +11301,7 @@
 			)
 		)
 		(property "Footprint" "EasyEDA:RES-TH_BD2.5-L6.5-P10.50-D0.6"
-			(at 127 134.62 0)
+			(at 139.7 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10845,7 +11312,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C1365775.pdf"
-			(at 127 132.08 0)
+			(at 139.7 133.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10856,7 +11323,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 142.24 0)
+			(at 139.7 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10867,7 +11334,7 @@
 			)
 		)
 		(property "Manufacturer" "VISHAY(威世)"
-			(at 127 129.54 0)
+			(at 139.7 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10878,7 +11345,7 @@
 			)
 		)
 		(property "MPN" "MBB02070Z0000ZC100"
-			(at 127 127 0)
+			(at 139.7 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10889,7 +11356,7 @@
 			)
 		)
 		(property "LCSC Part" "C1365775"
-			(at 127 124.46 0)
+			(at 139.7 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12464,7 +12931,7 @@
 	)
 	(symbol
 		(lib_id "EasyEDA:MBB02070Z0000ZC100")
-		(at 129.54 147.32 0)
+		(at 142.24 148.59 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12474,7 +12941,7 @@
 		(dnp no)
 		(uuid "86beebc4-1df2-448b-85f0-e56be0246f29")
 		(property "Reference" "R119"
-			(at 129.794 144.78 0)
+			(at 142.494 146.05 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12484,7 +12951,7 @@
 			)
 		)
 		(property "Value" "MBB02070Z0000ZC100"
-			(at 128.524 149.606 0)
+			(at 141.224 150.876 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12494,7 +12961,7 @@
 			)
 		)
 		(property "Footprint" "EasyEDA:RES-TH_BD2.5-L6.5-P10.50-D0.6"
-			(at 129.54 154.94 0)
+			(at 142.24 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12505,7 +12972,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C1365775.pdf"
-			(at 129.54 157.48 0)
+			(at 142.24 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12516,7 +12983,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 147.32 0)
+			(at 142.24 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12527,7 +12994,7 @@
 			)
 		)
 		(property "Manufacturer" "VISHAY(威世)"
-			(at 129.54 160.02 0)
+			(at 142.24 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12538,7 +13005,7 @@
 			)
 		)
 		(property "MPN" "MBB02070Z0000ZC100"
-			(at 129.54 162.56 0)
+			(at 142.24 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12549,7 +13016,7 @@
 			)
 		)
 		(property "LCSC Part" "C1365775"
-			(at 129.54 165.1 0)
+			(at 142.24 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13973,6 +14440,120 @@
 			(project "IOT_LC_PROTOTYPE_V1"
 				(path "/59331ef0-31b4-4adf-874b-2f71b754f421"
 					(reference "C103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "EasyEDA:CRCW12061M00FKEA")
+		(at 130.81 166.37 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a4a8dbe3-5132-4e06-9460-69333c65ca2b")
+		(property "Reference" "R122"
+			(at 133.35 165.0999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "CRCW12061M00FKEA"
+			(at 133.35 167.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "EasyEDA:R1206"
+			(at 138.43 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Vishay-Intertech-CRCW12061M00FKEA_C844869.html"
+			(at 140.97 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "VISHAY(威世)"
+			(at 143.51 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CRCW12061M00FKEA"
+			(at 146.05 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C844869"
+			(at 148.59 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3ff6f741-00af-4201-add0-1aa1c766d979")
+		)
+		(pin "2"
+			(uuid "ccae2f21-be3c-4cd8-9e4e-596af06abfe1")
+		)
+		(instances
+			(project "IOT_LC_PROTOTYPE_V1"
+				(path "/59331ef0-31b4-4adf-874b-2f71b754f421"
+					(reference "R122")
 					(unit 1)
 				)
 			)
@@ -16312,6 +16893,121 @@
 		)
 	)
 	(symbol
+		(lib_id "EasyEDA:DE1E3RA102MA4BN01F")
+		(at 125.73 166.37 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f3a573e1-ea5f-4aa2-8a22-a49c2513a553")
+		(property "Reference" "C107"
+			(at 121.92 165.0999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "DE1E3RA102MA4BN01F"
+			(at 121.92 167.6399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "EasyEDA:CAP-TH_L7.0-W4.0-P10.00-D0.6"
+			(at 118.11 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C373381.pdf"
+			(at 115.57 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "muRata(村田)"
+			(at 113.03 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "DE1E3RA102MA4BN01F"
+			(at 110.49 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C373381"
+			(at 107.95 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84dcf860-0502-47e0-a42b-ef6c3e349627")
+		)
+		(pin "2"
+			(uuid "dec003a5-82c1-4d47-b011-ef01f9d84c45")
+		)
+		(instances
+			(project "IOT_LC_PROTOTYPE_V1"
+				(path "/59331ef0-31b4-4adf-874b-2f71b754f421"
+					(reference "C107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "EasyEDA:SMBJ26CA_C83332")
 		(at 364.49 160.02 90)
 		(unit 1)
@@ -16759,7 +17455,7 @@
 		)
 	)
 	(sheet
-		(at 134.62 137.16)
+		(at 147.32 138.43)
 		(size 20.32 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16775,7 +17471,7 @@
 		)
 		(uuid "bbf86727-13ca-4d7a-958e-e95e47424e84")
 		(property "Sheetname" "36V_TO_5V+3V3"
-			(at 134.62 136.4484 0)
+			(at 147.32 137.7184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16786,7 +17482,7 @@
 			)
 		)
 		(property "Sheetfile" "../IOT_Blocks.kicad_blocks/36v to 5v + 3v3.kicad_block/36v to 5v + 3v3.kicad_sch"
-			(at 134.62 175.8446 0)
+			(at 147.32 177.1146 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16798,7 +17494,7 @@
 			)
 		)
 		(pin "3V3" input
-			(at 134.62 142.24 180)
+			(at 147.32 143.51 180)
 			(uuid "74a7a2da-8246-4b91-92b1-e0ca82ec3d30")
 			(effects
 				(font
@@ -16808,7 +17504,7 @@
 			)
 		)
 		(pin "5V" input
-			(at 134.62 147.32 180)
+			(at 147.32 148.59 180)
 			(uuid "3813deb3-6dcb-4068-904e-504acb8cf3a4")
 			(effects
 				(font
@@ -16818,7 +17514,7 @@
 			)
 		)
 		(pin "24V" passive
-			(at 134.62 152.4 180)
+			(at 147.32 153.67 180)
 			(uuid "f520a637-0fd2-4a51-a84a-2740b5f49670")
 			(effects
 				(font
@@ -16828,7 +17524,7 @@
 			)
 		)
 		(pin "EART" passive
-			(at 134.62 157.48 180)
+			(at 147.32 158.75 180)
 			(uuid "55b356d5-37f8-4767-9dfd-ff4549edbddc")
 			(effects
 				(font
@@ -16838,7 +17534,7 @@
 			)
 		)
 		(pin "GND" input
-			(at 134.62 161.29 180)
+			(at 147.32 162.56 180)
 			(uuid "49c8ebf1-d61a-41b2-b562-7ee4bec82e09")
 			(effects
 				(font
